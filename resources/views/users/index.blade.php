@@ -31,8 +31,12 @@
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->created_at->diffForHumans() }}</td>
                             <td>
-                                <a href="/users/{{ $user->id }}">view</a>
-                                <a href="/users/{{ $user->id }}/edit">edit</a>
+                                <div class="d-flex gap-2 justify-content-end">
+                                    <a href="/users/{{ $user->id }}"
+                                        class="btn btn-sm btn-outline-secondary">view</a>
+                                    <a href="/users/{{ $user->id }}/edit"
+                                        class="btn btn-sm btn-outline-secondary">edit</a>
+                                </div>
                             </td>
 
                         </tr>
